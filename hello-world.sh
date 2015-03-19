@@ -176,12 +176,12 @@ echo "TOGGLE BETWEEN LIGHT AND DARK MODE ctrl+opt+cmd+t"
 ###############################################################################
 
 echo ""
-echo "Disable hibernation? (speeds up entering sleep mode) (y/n)"
+echo "Disable hibernation"
   sudo pmset -a hibernatemode 0
   sudo rm /var/vm/sleepimage
 
 echo ""
-echo "Disable the sudden motion sensor? (it's not useful for SSDs/current MacBooks) (y/n)"
+echo "Disable the sudden motion sensor"
   sudo pmset -a sms 0
 
 
@@ -204,7 +204,7 @@ echo "Increasing sound quality for Bluetooth headphones/headsets"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 echo ""
-echo "Enabling full keyboard access for all controls (enable Tab in modal dialogs, menu windows, etc.)"
+echo "Enabling full keyboard access for all controls"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 echo ""
@@ -231,9 +231,6 @@ defaults write com.apple.BezelServices kDimTime -int 300
 echo ""
 echo "Disable display from automatically adjusting brightness? (y/n)"
   sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
-
-echo "Three finger swipe gesture"
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
 
 echo "Tap to click"
 sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -274,11 +271,11 @@ echo "Show icons for hard drives, servers, and removable media on the desktop"
 
 echo ""
 echo "Show hidden files in Finder by default? (y/n)"
-  defaults write com.apple.Finder AppleShowAllFiles -bool true
+#  defaults write com.apple.Finder AppleShowAllFiles -bool true
 
 echo ""
 echo "Show dotfiles in Finder by default"
-  defaults write com.apple.finder AppleShowAllFiles TRUE
+#  defaults write com.apple.finder AppleShowAllFiles TRUE
 
 echo ""
 echo "Show all filename extensions in Finder by default? (y/n)"
