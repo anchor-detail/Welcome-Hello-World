@@ -450,7 +450,7 @@ echo "Disable continuous spell checking in Messages.app? (y/n)"
 
   echo "TRANSMISSION"
   echo "Setting up an incomplete downloads folder in Downloads"
-  mkdir -p ~/Downloads/Incomplete
+  mkdir -p ~/Transmission/Incomplete
   defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
   defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
 
